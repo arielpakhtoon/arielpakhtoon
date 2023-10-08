@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARIEL PAKHTOON</title>
+    <style>
+        body {
+            background: url('heart.png') repeat, url('smiley.png') repeat, url('laughing.png') repeat, url('plus.png') repeat, url('educational.png') repeat;
+            background-size: contain;
+            background-position: center;
+            background-attachment: fixed;
+            background-blur: 10px;
+            font-family: "Teutonic.1", sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 36px;
+            color: #006400; /* Darker green */
+            border-bottom: 1px solid #fff; /* Thin white strip */
+            display: inline-block;
+        }
+        button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+        }
+    </style>
+    <script>
+        function addVideo() {
+            // Assuming you want to display a video upload form
+            const videoForm = document.createElement("form");
+            videoForm.innerHTML = `
+                <label for="videoFile">Upload Video:</label>
+                <input type="file" id="videoFile" accept="video/*">
+                <button type="button" onclick="uploadVideo()">Upload</button>
+            `;
+            document.body.appendChild(videoForm);
+        }
+
+        function uploadVideo() {
+            // Assuming you want to process the uploaded video
+            const videoFile = document.getElementById("videoFile").files[0];
+            // Add code to handle the video file, e.g., upload it to a server or display it
+            alert("Video uploaded: " + videoFile.name);
+        }
+
+        function addImage() {
+            // Similar logic as addVideo but for image uploads
+        }
+
+        function addVoice() {
+            // Similar logic as addVideo but for voice uploads
+        }
+
+        function addFiles() {
+            // Similar logic as addVideo but for file uploads (e.g., documents)
+        }
+
+        function addLinks() {
+            // Assuming you want to collect and display links
+            const linkInput = prompt("Enter a link:");
+            if (linkInput) {
+                // Add code to process the submitted link, e.g., store it or display it
+                alert("Link added: " + linkInput);
+            }
+        }
+
+        // Function to open the HTML file for editing
+        function openEditor() {
+            window.location.href = "https://github.com/your-username/arielpakhtoon.github.io/edit/main/index.html";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>ARIEL PAKHTOON</h1>
+        <button onclick="addVideo()">🎥 Add a video</button>
+        <button onclick="addImage()">📷 Add an image</button>
+        <button onclick="addVoice()">🎤 Add a voice</button>
+        <button onclick="addFiles()">📂 Add other files</button>
+        <button onclick="addLinks()">🔗 Add Links</button>
+        <button onclick="openEditor()">Edit</button> <!-- Edit button to open the HTML file for editing -->
+    </div>
+</body>
+  </html>
+  
